@@ -68,10 +68,19 @@ Entity Framework CLI (opcjonalne, jeśli chcemy uruchamiać migracje z terminala
 
 Sklonuj repozytorium projektu:
 
-git clone https://github.com/DanielIstock/TrackerIssue-ProjektZaliczeniowy.git
+git clone https://github.com/DanielIstock/TrackerIssue-zaliczenie.git
 
 cd TrackerIssue
 
+**Pobierz potrzebne biblioteki:**
+
+Microsoft.EntityFrameworkCore
+
+Microsoft.EntityFrameworkCore.SqlServer
+
+Microsoft.EntityFrameworkCore.Tools
+
+*Aby pobrać bliblioteki należy wejść w menedżer pakietów NuGet i tam je dodać
 
 **Przygotuj bazę danych:**
 
