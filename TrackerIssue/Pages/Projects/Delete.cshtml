@@ -1,0 +1,19 @@
+﻿@page "{id:int}"
+@model TrackerIssue.Pages.Projects.DeleteModel
+@{
+    ViewData["Title"] = "Delete Project";
+}
+
+<h1>Delete Project</h1>
+
+<p>Are you sure you want to delete this project?</p>
+
+<div>
+    <strong>@Model.Project.Name</strong>
+    <p>@Model.Project.Description</p>
+</div>
+
+<form method="post">
+    <button type="submit">Delete</button>
+    <a asp-page="./Index">Cancel</a>
+</form>

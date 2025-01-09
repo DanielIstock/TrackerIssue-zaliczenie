@@ -1,0 +1,34 @@
+﻿@page
+@model TrackerIssue.Pages.Issues.AddModel
+@{
+    ViewData["Title"] = "Add Issue";
+}
+
+<h1>Add Issue</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Issue.Title"></label>
+        <input asp-for="Issue.Title" />
+        <span asp-validation-for="Issue.Title"></span>
+    </div>
+    <div>
+        <label asp-for="Issue.Description"></label>
+        <textarea asp-for="Issue.Description"></textarea>
+        <span asp-validation-for="Issue.Description"></span>
+    </div>
+    <div>
+        <label asp-for="Issue.Priority"></label>
+        <select asp-for="Issue.Priority">
+            <option value="0">Low</option>
+            <option value="1">Medium</option>
+            <option value="2">High</option>
+        </select>
+        <span asp-validation-for="Issue.Priority"></span>
+    </div>
+    <button type="submit">Add Issue</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

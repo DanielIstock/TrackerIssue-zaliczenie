@@ -1,0 +1,31 @@
+﻿@page
+@model TrackerIssue.Pages.Issues.IndexModel
+@{
+    ViewData["Title"] = "Issues List";
+}
+
+<h1>Issues List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var issue in Model.Issues)
+        {
+            <tr>
+                <td>@issue.Title</td>
+                <td>@issue.Description</td>
+                <td>@issue.Priority</td>
+                <td>@issue.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-page="./Add">Add New Issue</a>

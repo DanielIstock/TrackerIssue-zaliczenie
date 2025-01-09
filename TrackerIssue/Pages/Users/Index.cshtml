@@ -1,0 +1,27 @@
+﻿@page
+@model TrackerIssue.Pages.Users.IndexModel
+@{
+    ViewData["Title"] = "Users List";
+}
+
+<h1>Users List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Login</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.Login</td>
+                <td>@user.Role</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-page="./Register">Register New User</a>

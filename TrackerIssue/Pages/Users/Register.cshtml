@@ -1,0 +1,33 @@
+﻿@page
+@model TrackerIssue.Pages.Users.RegisterModel
+@{
+    ViewData["Title"] = "Register User";
+}
+
+<h1>Register User</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="User.Login"></label>
+        <input asp-for="User.Login" />
+        <span asp-validation-for="User.Login"></span>
+    </div>
+    <div>
+        <label asp-for="User.Password"></label>
+        <input asp-for="User.Password" type="password" />
+        <span asp-validation-for="User.Password"></span>
+    </div>
+    <div>
+        <label asp-for="User.Role"></label>
+        <select asp-for="User.Role">
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+        </select>
+        <span asp-validation-for="User.Role"></span>
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

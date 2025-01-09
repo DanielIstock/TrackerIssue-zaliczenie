@@ -1,0 +1,26 @@
+﻿@page "{id:int}"
+@model TrackerIssue.Pages.Projects.EditModel
+@{
+    ViewData["Title"] = "Edit Project";
+}
+
+<h1>Edit Project</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Project.Id" />
+    <div>
+        <label asp-for="Project.Name"></label>
+        <input asp-for="Project.Name" />
+        <span asp-validation-for="Project.Name"></span>
+    </div>
+    <div>
+        <label asp-for="Project.Description"></label>
+        <textarea asp-for="Project.Description"></textarea>
+        <span asp-validation-for="Project.Description"></span>
+    </div>
+    <button type="submit">Save Changes</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
